@@ -29,20 +29,25 @@ public class Main {
 
 
     public static void main(String[] args) {
-        //Update this
+        //this will store out list of Customers
+        List<Customer> customers = Arrays.asList();
 
-        //creating Wayne
+        //creating and adding Wayne
         Customer wayneEnterprises = new Customer(1, "Wayne Enterprises");
         wayneEnterprises.composeRecords(customerData);
+        customers.add(wayneEnterprises);
 
         //creating Daily
         Customer dailyPlanet = new Customer(2, "Daily Planet");
         dailyPlanet.composeRecords(customerData);
+        customers.add(dailyPlanet);
 
         //creating Ace
         Customer aceChemical = new Customer(3, "Ace Chemical");
         aceChemical.composeRecords(customerData);
+        customers.add(aceChemical);
 
+        //dividing up positive and negative accounts
         List<String []> uniquePositiveData = customerData.stream()
                 .filter(customer -> Integer.parseInt(customer[2]) > 0)
                 .collect(Collectors.toList());
