@@ -22,7 +22,7 @@ public class CustomerRepositoryTest {
 
     @BeforeEach
     public void setUp() {
-        repo.deleteAll();;
+        repo.deleteAll();
     }
 
     @Test
@@ -45,7 +45,7 @@ public class CustomerRepositoryTest {
 
         // Assert
         Optional<Customer> customer1 = repo.findById(customer.getCustomerId());
-        assertEquals(customer1.get(), customer);
+        assertEquals(customer1.get(), customer);;
     }
 
     @Test
